@@ -31,23 +31,39 @@ function isMessageValid(aMessage) {
     return res;
 }
 
+function isUsernameValid(anUsername) {
+    res = true;
+    if (anUsername === null || anUsername.length == 0 || /^\s+$/.test(anUsername)) {
+        res = false;
+        showError('usernameError', "El nombre de usuario no puede estar vacío");
+    } else {
+        hideError('usernameError');
+    }
+    return res;
+}
+
 
 function validacion() {
+    username = document.getElementById('username').value;
     message = document.getElementById('message').value;
     email = document.getElementById('email').value;
 
     isValid = true;
 
-    if (!isMessageValid(message)){
+    if (!isUsernameValid(username)) {
         isValid = false;
     }
 
     if (!isEmailValid(email)){
         isValid = false;
     }
+
+    if (!isMessageValid(message)){
+        isValid = false;
+    }
     
     if (isValid){
-        alert("¡Usuario registrado con éxito!");
+        alert("¡Mensaje enviado con éxito!");
     }
 
     return isValid;
