@@ -1,0 +1,27 @@
+body {  
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: rgb(34,193,195);
+    background: -webkit-linear-gradient(to left, rgba(34,193,195,1) 0%, rgba(253,107,45,1) 100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, rgba(34,193,195,1) 0%, rgba(253,107,45,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+input:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+
+.kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.error-message {
+    visibility: hidden; 
+}
